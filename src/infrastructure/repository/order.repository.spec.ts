@@ -106,8 +106,15 @@ describe("Order repository test", () => {
     const orderRepository = new OrderRepository();
     await orderRepository.create(order);
 
+    const newOrderItem = new OrderItem(
+      "1",
+      "teste",
+      product.price,
+      product.id,
+      1
+    );
+    order.changeItems([newOrderItem]);
     await orderRepository.update(order);
-
     const orderModel = await OrderModel.findOne({
       where: { id: order.id },
       include: ["items"],
@@ -119,15 +126,17 @@ describe("Order repository test", () => {
       total: order.total(),
       items: [
         {
-          id: orderItem.id,
-          name: orderItem.name,
-          price: orderItem.price,
-          quantity: orderItem.quantity,
+          id: newOrderItem.id,
+          name: newOrderItem.name,
+          price: newOrderItem.price,
+          quantity: newOrderItem.quantity,
           order_id: "123",
           product_id: "123",
         },
       ],
     });
+
+
   });
   it("should find an order", async () => {
     const customerRepository = new CustomerRepository();
