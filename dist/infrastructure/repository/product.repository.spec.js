@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const sequelize_typescript_1 = require("sequelize-typescript");
 const product_model_1 = __importDefault(require("../db/sequelize/model/product.model"));
-const product_1 = __importDefault(require("../../domain/entity/product"));
+const product_1 = __importDefault(require("../../domain/product/entity/product"));
 const product_repository_1 = __importDefault(require("./product.repository"));
 describe("Product Repositry test", () => {
     let sequilize;

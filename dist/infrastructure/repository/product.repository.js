@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const product_1 = __importDefault(require("../../domain/entity/product"));
+const product_1 = __importDefault(require("../../domain/product/entity/product"));
 const product_model_1 = __importDefault(require("../db/sequelize/model/product.model"));
 class ProductRepository {
     async update(entity) {

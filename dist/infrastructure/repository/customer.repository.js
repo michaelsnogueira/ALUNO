@@ -3,8 +3,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const address_1 = require("../../domain/entity/address");
-const customer_1 = __importDefault(require("../../domain/entity/customer"));
+const address_1 = require("../../domain/customer/value-object/address");
+const customer_1 = __importDefault(require("../../domain/customer/entity/customer"));
 const customer_model_1 = __importDefault(require("../db/sequelize/model/customer.model"));
 class CustomerRepository {
     async create(entity) {

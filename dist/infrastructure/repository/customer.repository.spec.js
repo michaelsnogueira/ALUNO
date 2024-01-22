@@ -6,8 +6,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const sequelize_typescript_1 = require("sequelize-typescript");
 const customer_model_1 = __importDefault(require("../db/sequelize/model/customer.model"));
 const customer_repository_1 = __importDefault(require("./customer.repository"));
-const customer_1 = __importDefault(require("../../domain/entity/customer"));
-const address_1 = require("../../domain/entity/address");
+const customer_1 = __importDefault(require("../../domain/customer/entity/customer"));
+const address_1 = require("../../domain/customer/value-object/address");
 describe("Customer repository test", () => {
     let sequelize;
     beforeEach(async () => {
